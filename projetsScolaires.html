@@ -7,15 +7,60 @@
   <link rel="stylesheet" href="styles/styleProjets.css">
 </head>
 <body>
-    <nav class="navbar">
-        <ul>
-            <li><a href="index.html">Présentation</a></li>
-            <li><a href="projetsScolaires.html">Projets scolaires</a></li>
-            <li><a href="projetsProfessionnels.html">Projets professionnels</a></li>
-            <li><a href="projetsPersonnels.html">Projets personnels</a></li>
-            <li><a href="veilleTechnologique.html">Veille technologique</a></li>
-        </ul>
-    </nav>
+  <nav class="navbar">
+    <div class="burger" onclick="toggleMenu()">☰</div>
+    <ul id="navlinks">
+      <li><a href="index.html">Présentation</a></li>
+      <li><a href="projetsScolaires.html">Projets scolaires</a></li>
+      <li><a href="projetsProfessionnels.html">Projets professionnels</a></li>
+      <li><a href="projetsPersonnels.html">Projets personnels</a></li>
+      <li><a href="veilleTechnologique.html">Veille technologique</a></li>
+    </ul>
+  </nav>
 
     <main>
-        <h1>Mes Projets Scolaires</h1>
+        <h1>Mes Projets scolaires</h1>
+    
+        <section>
+          <h2>API de gestion de dosettes de café</h2>
+            <p><strong>Technos :</strong> React.js (JavaScript), Laravel (PHP), MySQL, Docker</p>
+            <p><strong>Contexte et objectif :</strong> Gérer un stock de dosettes de café (créer, modifier, supprimer) et permettre à l'utilisateur d'acheter des dosettes</p>
+            
+            <h3>Tâches effectuées :</h3>
+            <ul>
+              <li>Conception de la base de données (MySQL) sur un docker.</li>
+              <li>Créer une api avec Laravel</li>
+              <li>Concevoir des routes pour récupérer des informations sur les marques, les continents et pays des dosettes (/marques, /continents et /pays)</li>
+              <li>Concevoir la route /dosettes pour récupérer la liste des dosettes et créer une possibilité de filtrage par exemple de prix ou d'intensité</li>
+              <li>Gérer le mode d'envoi de /dosettes pour que ça gère la dosette sélectionnée. Par exemple : /dosettes/{id} envoyé en 'get' récupère les informations d'une dosette. En 'update' cela permet de modifier les données d'une dosette. En 'delete' cela permet de supprimer la dosette.</li>
+              <li>Concevoir la route /dosette pour créer une nouvelle dosette</li>
+              <li>Création de l'interface avec React, en liant le docker et l'interface</li>
+              <li>Gérer la partie achat de dosettes</li>
+            </ul><br>
+            <p><strong>Page d'accueil</strong></p>
+            <img src="img/psDosettesIndex.png" alt="Accueil de l'application"><br>
+            <p><strong>Page d'administration</strong></p>
+            <img src="img/psDosettesAdmin.png" alt="Recherche de fichiers">
+            <p><strong>Panier d'un utilisateur</strong></p>
+            <img src="img/psDosettesPanier.png" alt="Recherche de fichiers">
+        </section>
+    
+
+
+
+
+
+
+
+        
+
+        
+      </main>
+      <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navlinks');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

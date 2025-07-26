@@ -11,10 +11,13 @@
   <header class="welcome-banner">
     <h1>Bienvenue sur mon portfolio</h1>
     <p>CAGLIOTI Noa - Développeur</p>
+    <a href="docs/cv.pdf">CV</a>
+
   </header>
 
   <nav class="navbar">
-    <ul>
+    <div class="burger" onclick="toggleMenu()">☰</div>
+    <ul id="navlinks">
       <li><a href="index.html">Présentation</a></li>
       <li><a href="projetsScolaires.html">Projets scolaires</a></li>
       <li><a href="projetsProfessionnels.html">Projets professionnels</a></li>
@@ -37,15 +40,19 @@
     <div class="timeline" id="scolaire-timeline">
       <div class="timeline-entry">
         <h3>Baccalauréat STI2D</h3>
-        <p>Septembre 2020 à juin 2022 - Lycée Blaise Pascal (Saint Dizier)</p>
+        <p>Septembre 2020 à Juin 2022 - Lycée Blaise Pascal (Saint Dizier)</p>
+      </div>
+      <div class="timeline-entry">
+        <h3>2e Cycle de Solfège</h3>
+        <p>Juillet 2022 - Conservatoire Jean Wiener</p>
       </div>
       <div class="timeline-entry">
         <h3>BUT Informatique - Première Année</h3>
-        <p>Septembre 2022 à juin 2023 - IUT Charlemagne (Laxou)</p>
+        <p>Septembre 2022 à Juin 2023 - IUT Charlemagne (Laxou)</p>
       </div>
       <div class="timeline-entry">
         <h3>BTS SIO spécialité SLAM</h3>
-        <p>Septembre 2023 à maintenant - Lycée Raymond Poincaré (Bar-le-Duc)</p>
+        <p>Septembre 2023 à Juin 2025 - Lycée Raymond Poincaré (Bar-le-Duc)</p>
       </div>
     </div>
 
@@ -53,7 +60,7 @@
     <div class="timeline" id="pro-timeline">
       <div class="timeline-entry">
         <h3>Job d'été - Remise en Rayon</h3>
-        <p>Juillet à septembre 2022 - Cora Saint Dizier</p>
+        <p>Juillet à Septembre 2022 - Cora Saint Dizier</p>
       </div>
       <div class="timeline-entry">
         <h3>Job étudiant - Employé drive</h3>
@@ -65,38 +72,11 @@
       </div>
       <div class="timeline-entry">
         <h3>Stage de première année de BTS SIO</h3>
-        <p>Mai à juillet 2024 - Association Le Bois l'Abbesse (Saint Dizier)</p>
+        <p>Mai à Juillet 2024 - Association Le Bois l'Abbesse (Saint Dizier)</p>
       </div>
       <div class="timeline-entry">
         <h3>Stage de deuxième année de BTS SIO</h3>
-        <p>Janvier à mars 2025 - Entreprise Alexis Colinon (Villers-le-sec)</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="bts-info">
-    <h2>Le BTS SIO</h2>
-    <div class="bts-options">
-      <div class="bts-option">
-        <h3>Option SISR</h3>
-        <p>L’option Solutions d’infrastructure, systèmes et réseaux prépare des spécialistes en réseaux et équipements informatiques (installation, maintenance, sécurité). En obtenant un BTS SIO option SISR, vous serez en mesure de gérer et administrer le réseau d’une organisation tout en garantissant sa sécurité et sa maintenance.</p>
-        <p>Les titulaires du BTS SIO option SISR peuvent exercer les métiers suivants :</p>
-        <ul>
-          <li>Administrateur systèmes et réseaux</li>
-          <li>Informaticien support et déploiement</li>
-          <li>Pilote d’exploitation</li>
-          <li>Support systèmes et réseaux</li>
-        </ul>
-      </div>
-      <div class="bts-option">
-        <h3>Option SLAM</h3>
-        <p>L’option Solutions logicielles et applications métiers forme des spécialistes des logiciels (rédaction d’un cahier des charges, formulation des besoins et spécifications, développement, intégration au sein de la société).</p>
-        <p>Les techniciens supérieurs en informatique option SLAM, sont préparés aux métiers de :</p>
-        <ul>
-          <li>Développeur d’applications informatiques</li>
-          <li>Développeur informatique</li>
-          <li>Analyste d’applications ou d’études</li>
-        </ul>
+        <p>Janvier à Mars 2025 - Entreprise Alexis Colinon (Villers-le-sec)</p>
       </div>
     </div>
   </section>
@@ -104,6 +84,15 @@
   <section class="skills-carousel">
     <h2>Mes compétences</h2>
     <div class="logos-static">
+
+          <div class="logo">
+            <img src="img/csharp.png" alt="C#">
+            <div class="tooltip">
+              <strong>C#</strong><br>
+              Niveau avancé<br>
+              Développement d'applications de bureau
+            </div>
+          </div>
 
           <div class="logo">
             <img src="img/java.png" alt="Java">
@@ -145,7 +134,7 @@
             <img src="img/mysql.png" alt="MySQL">
             <div class="tooltip">
               <strong>MySQL</strong><br>
-              Niveau intermédiaire<br>
+              Niveau avancé<br>
               Conception et gestion de bases de données
             </div>
           </div>
@@ -199,14 +188,18 @@
             <img src="img/laravel.png" alt="Laravel">
             <div class="tooltip">
               <strong>Laravel</strong><br> 
-              Niveau débutant<br>
-              Conception de back-end web simples
+              Niveau intermédiaire<br>
+              Conception de back-end web
             </div>
           </div>
       
     </div>
   </section>
-  
-
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('navlinks');
+      navLinks.classList.toggle('active');
+    }
+  </script>
 </body>
 </html>

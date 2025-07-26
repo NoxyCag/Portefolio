@@ -8,14 +8,24 @@
 </head>
 <body>
     <nav class="navbar">
-        <ul>
-            <li><a href="index.html">Présentation</a></li>
-            <li><a href="projetsScolaires.html">Projets scolaires</a></li>
-            <li><a href="projetsProfessionnels.html">Projets professionnels</a></li>
-            <li><a href="projetsPersonnels.html">Projets personnels</a></li>
-            <li><a href="veilleTechnologique.html">Veille technologique</a></li>
+        <div class="burger" onclick="toggleMenu()">☰</div>
+        <ul id="navlinks">
+          <li><a href="index.html">Présentation</a></li>
+          <li><a href="projetsScolaires.html">Projets scolaires</a></li>
+          <li><a href="projetsProfessionnels.html">Projets professionnels</a></li>
+          <li><a href="projetsPersonnels.html">Projets personnels</a></li>
+          <li><a href="veilleTechnologique.html">Veille technologique</a></li>
         </ul>
-    </nav>
+      </nav>
 
     <main>
         <h1>Mes Projets Personnels</h1>
+    </main>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navlinks');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
