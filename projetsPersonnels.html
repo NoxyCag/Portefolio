@@ -7,21 +7,67 @@
   <link rel="stylesheet" href="styles/styleProjets.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="burger" onclick="toggleMenu()">☰</div>
-        <ul id="navlinks">
-          <li><a href="index.html">Présentation</a></li>
-          <li><a href="projetsScolaires.html">Projets scolaires</a></li>
-          <li><a href="projetsProfessionnels.html">Projets professionnels</a></li>
-          <li><a href="projetsPersonnels.html">Projets personnels</a></li>
-          <li><a href="veilleTechnologique.html">Veille technologique</a></li>
-        </ul>
-      </nav>
+  <nav class="navbar">
+    <div class="burger" onclick="toggleMenu()">☰</div>
+    <ul id="navlinks">
+      <li><a href="index.html">Présentation</a></li>
+      <li><a href="projetsScolaires.html">Projets scolaires</a></li>
+      <li><a href="projetsProfessionnels.html">Projets professionnels</a></li>
+      <li><a href="projetsPersonnels.html">Projets personnels</a></li>
+      <li><a href="veilleTechnologique.html">Veille technologique</a></li>
+    </ul>
+  </nav>
 
     <main>
-        <h1>Mes Projets Personnels</h1>
-    </main>
-    <script>
+        <h1>Mes Projets personnels</h1>
+    
+        <section>
+          <h2>Monopoly mini</h2>
+            <p><strong>Technos :</strong> Java</p>
+            <p><strong>Contexte et objectif :</strong> Jouer à une partie de monopoly en étant dans le cmd, sans utiliser d'interface </p>
+            
+            <h3>Tâches effectuées :</h3>
+            <ul>
+              <li>Concevoir un plateau de jeu avec des --- et des | </li>
+              <li>Concevoir des classes pour chaque case spéciale, avec ses effets distincts</li>
+              <li>Gérer comment interragissent les joueurs avec le plateau et les cases différentes</li>
+              <li>Modifier l'interface du plateau du jeu pour instaurer les joueurs et les différentes cases, et y ajouter des couleurs</li>
+              <li>Créer des commandes pour que les joueurs puissent interragir avec le jeu et jouer</li>
+              <li>Permettre la création de la partie, en ajoutant des paramètres et modificateurs</li>
+              <li>Créer un système de sauvegarde d'une partie via un fichier txt enregistré en local</li>
+            </ul><br>
+            <h3>Comment ça fonctionne :</h3>
+            <p>Au lancement de la partie de nombreux paramètres sont proposés pour créer la partie et y ajouter différents modificateurs</p>
+            <p><strong>Paramètres et Modificateurs</strong></p>
+            <img src="img/ppMonopolyParametres.png" alt="Paramètres de début de jeu"><br>
+
+            <p>Le jeu présente ensuite le plateau, qui est affiché comme un tableau d'une seule ligne, avec dans chaque case les 3 premières lettres du nom de la rue, ou bien des caractères spéciaux pour les cases chances (#) et le parc (€). Les pions des joueurs sont spécifiés par la première lettre de leur pseudo, avec leur couleur prédéfinie. Les pions se trouvent au dessus de la case où ils sont</p>
+            <p><strong>Plateau au début de la partie</strong></p>
+            <img src="img/ppMonopolyPlateau.png" alt="Plateau de début de jeu"><br>
+
+            <p>Différentes commandes sont ensuite disponnible au joueur comme "lancer" ou "l" pour lancer le dé et commencer à jouer. Il peut aussi vendre une de ses possessions à un joueur, paramétrer la partie, ou même afficher des stats de la partie. Les paramètres vont ajouter aussi des modifications via les couleurs affichés sur le plateau du jeu, pour le rendre plus vivant.</p>
+            <p><strong>Paramètres disponibles</strong></p>
+            <img src="img/ppMonopolyParametresJeu.png" alt="Paramètres en cours de partie">
+            <p><strong>Affichage des statistiques</strong></p>
+            <img src="img/ppMonopolyStats.png" alt="Statistiques"><br>
+
+            <p>Lorsque le joueur lance le dé, il déplace son pion et le jeu affiche la carte de la case où il apparait. S'il tombe sur une rue, il peut décider d'acheter la rue ou non. Si elle est déjà possédée, il paye automatiquement le joueur qui possède la maison. De plus, en possédant une case, celle-ci se colorise avec la couleur du joueur</p>
+            <p><strong>Exemple d'achat d'une rue</strong></p>
+            <img src="img/ppMonopolyRue.png" alt="Carte d'une rue">
+            <p><strong>Impossibilité d'acheter une rue car le solde est pas suffisemment élevé</strong></p>
+            <img src="img/ppMonopolyRueCher.png" alt="Carte d'une rue">
+            <p><strong>Exemple d'une case Chance</strong></p>
+            <img src="img/ppMonopolyChance.png" alt="Carte d'une rue">
+            <p><strong>Tomber sur la location de quelqu'un d'autre et devoir payer le loyer</strong></p>
+            <img src="img/ppMonopolyPayer.png" alt="Carte d'une rue">
+
+
+        </section>
+    
+        
+        
+      </main>
+      <script>
         function toggleMenu() {
             const navLinks = document.getElementById('navlinks');
             navLinks.classList.toggle('active');
